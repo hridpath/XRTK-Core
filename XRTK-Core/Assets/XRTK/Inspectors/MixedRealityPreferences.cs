@@ -121,7 +121,11 @@ namespace XRTK.Inspectors
 
         #endregion  Start Scene Preference
 
+#if UNITY_2019_1_OR_NEWER
+        [SettingsProvider]
+#else
         [PreferenceItem("Mixed Reality Toolkit")]
+#endif
         private static void Preferences()
         {
             var prevLabelWidth = EditorGUIUtility.labelWidth;
